@@ -1,0 +1,6 @@
+﻿  TitleScene.cpp
+c:\users\taewo\desktop\directxsamples\3d\titlescene.cpp(30): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  3D.cpp
+  코드를 생성하고 있습니다...
+Block.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
+  3D_2010.vcxproj -> C:\Users\taewo\Desktop\DirectXSamples\3D\Debug\3D.exe
