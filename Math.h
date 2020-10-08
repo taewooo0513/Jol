@@ -10,16 +10,21 @@ public:
 	float Frequency = 1 / WaveLength;
 	float Octave = 10;
 	float Persistence = 5;
-	FLOAT Noise1(FLOAT x, FLOAT y)
+	FLOAT MapSeed(int seed)
 	{
-		int n = x + y * 57;
-		int z = (n << 13) ^ n;
-		return (1.0 - ((z*(z*z * 15731 + 789221) + 1376312589) & 0x7fffffff) / 1073741824.0);
+		mt19937 mt(seed);
+		std::uniform_real_distribution<FLOAT>dis(10, 100);
+		return dis(mt);
 	}
-	FLOAT SmoothNoise(FLOAT x, FLOAT y)
+	FLOAT SmoothNoise(FLOAT x)
 	{
+		
+		return MapSeed(x)/2 + MapSeed(x-1)/4 + MapSeed(x+1)/4;
+	}
 
-	}
+		
+	
+	
 };
 
 #define MATH Math::GetInstance()

@@ -8,6 +8,7 @@
 #include <sstream>
 #include <fstream>
 #include <iostream>
+#include <random>
 #include <math.h>
 #pragma comment(lib,"dsound.lib")
 

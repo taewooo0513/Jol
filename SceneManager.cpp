@@ -25,7 +25,7 @@ void SceneManager::ChangeScene(string key)
 	auto find = mScene.find(key);
 	if (find == mScene.end())
 	{
-		return;
+		return;	
 	}
 	NextScene = find->second;
 }

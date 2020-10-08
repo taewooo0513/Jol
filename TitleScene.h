@@ -9,8 +9,7 @@ private:
 public:
 	float ASD[1000];
 	Vec2 a,b,c,d;
-	Vec2 map[500][100];
-	Vec2 SE[53];
+	FLOAT ddddddd[30];
 	int FSDA =1 ;
 	int i = 0;
 	int FD = 0;
@@ -18,6 +17,7 @@ public:
 	float DF;
 	int aa = 0;
 	int bb = 0;
+	int afsdfasbido = 0;
 	CDXUTTimer * timer;
 	TitleScene();
 	virtual ~TitleScene();
