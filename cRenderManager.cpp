@@ -61,7 +61,7 @@ cRenderManager::~cRenderManager()
 	vb->Release();
 	ib->Release();
 }
-
+                        
 void cRenderManager::Render(Mesh * mesh, Vec3 Pos, Vec3 Sclae, Vec3 Rot)
 {
 	D3DXMATRIXA16 matP, matS, matR, matR1, matR2, matR3, matW;

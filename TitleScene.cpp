@@ -22,14 +22,37 @@ void TitleScene::Init()
 
 	for (int i = 0; i < 20; i++)
 	{
-		ddddddd[i] = MATH->SmoothNoise(600+i);
+		ddddddd[i] = MATH->SmoothNoise(404122+i);
 	}
+	for (int Dex = 0; Dex < 20; Dex++)
+	{
+		
+		if (Dex != 0 && Dex != 19)
+		{
 
+			for (int dfs = 0; dfs < 20; dfs++)
+			{
+				D3DXVec2Hermite(&psos[Dex][dfs],&Vec2(Dex * 120,ddddddd[Dex]*5)
+					,&(Vec2((Dex +1) * 120, ddddddd[Dex+1] * 5)-Vec2((Dex)* 120 ,ddddddd[Dex] * 5))
+					,&Vec2((Dex +1)* 120 ,ddddddd[Dex +1] * 5)
+					, &(Vec2((Dex +2) * 120 , ddddddd[Dex +2] * 5) - Vec2((Dex + 1) * 120 , ddddddd[Dex + 1] * 5))
+					,dfs * 0.05);
+			}
+
+		}
+	}
 }
 
 void TitleScene::Update()
 {
-	
+	for (int i = 0; i < 30; i++)
+	{
+		for (int j = 0; j < 20; j++)
+		{
+			OBJ->AddObj(new ExObject(Vec2(psos[i][j].x, psos[i][j].y+ asdffasd)));
+		}
+	}
+	asdffasd += 70;
 }
 
 void TitleScene::Render()
@@ -58,7 +81,7 @@ void TitleScene::UIRender()
 		afsdfasbido++;
 		timer->Reset();
 	}
-		RENDER2D->TextDraw(to_string( ddddddd[afsdfasbido]),Vec2(500,500),50,true,D3DCOLOR_XRGB(0,0,0));
+		RENDER2D->TextDraw(to_string( psos[11][afsdfasbido].y),Vec2(500,500),50,true,D3DCOLOR_XRGB(0,0,0));
 	
 	
 

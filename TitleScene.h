@@ -19,6 +19,8 @@ public:
 	int bb = 0;
 	int afsdfasbido = 0;
 	CDXUTTimer * timer;
+	Vec2 psos[30][20];
+	float asdffasd = 0;
 	TitleScene();
 	virtual ~TitleScene();
 public:
