@@ -31,6 +31,7 @@ void main::Update()
 void main::Render()
 {
 	
+
 	SCENE->Render();
 	OBJ->Render();
 	RENDER2D->Begin();
