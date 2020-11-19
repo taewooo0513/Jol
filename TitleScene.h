@@ -11,7 +11,7 @@ public:
 	Vec2 a,b,c,d;
 	FLOAT ddddddd[30];
 	int FSDA =1 ;
-	int i = 0;
+	//int i = 0;
 	int FD = 0;
 	float CC[53];
 	float DF;

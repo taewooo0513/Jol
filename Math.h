@@ -13,7 +13,7 @@ public:
 	FLOAT MapSeed(int seed)
 	{
 		mt19937 mt(seed);
-		std::uniform_real_distribution<FLOAT>dis(50, 100);
+		uniform_real_distribution<float>dis(50, 100);
 		return dis(mt);
 	}
 	FLOAT SmoothNoise(FLOAT x)

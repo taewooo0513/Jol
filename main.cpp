@@ -13,9 +13,10 @@ main::~main()
 
 void main::Init()
 {
-	IMAGE->AddImage("Tile", "./resource/Dirt/Tile1.png");
-IMAGE->AddImage("TitleImage2", "./resource/Image/SplashScreens/Splash_9_1.png");
-	IMAGE->AddImage("TitleImage","./resource/Image/SplashScreens/Splash_9_0.png");
+	IMAGE->AddMesh("fdasafsadfkjhjhsdfalksd","./resource/c.obj");
+	/*IMAGE->AddImage("Tile", "./resource/Dirt/Tile1.png");
+	IMAGE->AddImage("TitleImage2", "./resource/Image/SplashScreens/Splash_9_1.png");
+	IMAGE->AddImage("TitleImage","./resource/Image/SplashScreens/Splash_9_0.png");*/
 	SCENE->AddScene("Title",new TitleScene);
 	SCENE->AddScene("EX",new ExScene);
 	SCENE->AddScene("IngameSceneSmall", new IngameSceneSmall);
@@ -45,11 +46,12 @@ void main::Release()
 	cImageManager::ReleaseInstance();
 	cMeshLoader::ReleaseInstance();
 	SoundManager::ReleaseInstance();
-	ObjectManager::ReleaseInstance();
 	SceneManager::ReleaseInstance();
 	CamManager::ReleaseInstance();
+	Math::ReleaseInstance();
 	cRenderManager::ReleaseInstance();
 	Render2DManager::ReleaseInstance();
+	ObjectManager::ReleaseInstance();
 }
 
 void main::ResetDevice()

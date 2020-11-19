@@ -33,7 +33,7 @@ public:
 	}
 	~Texture()
 	{
-	
+		//SAFE_RELEASE(texturePtr);
 	};
 	LPDIRECT3DTEXTURE9 texturePtr;
 	D3DXIMAGE_INFO info;

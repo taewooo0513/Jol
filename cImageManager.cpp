@@ -22,15 +22,17 @@ cImageManager::~cImageManager()
 	SAFE_DELETE(Loader);
 }
 
-Texture * cImageManager::AddImage(const string key, const string path)
+Texture * cImageManager::AddImage(const string& key, const string& path)
 {
 	auto find = image.find(key);
 	if (find == image.end())
 	{
+		D3DXIMAGE_INFO info;
+		LPDIRECT3DTEXTURE9 texturePtr;
 		if (D3DXCreateTextureFromFileExA(g_Device, path.c_str(), -2, -2, 0, 0, D3DFMT_UNKNOWN, D3DPOOL_DEFAULT, -1, -1, 0, &info, nullptr, &texturePtr) == S_OK)
 		{
 			Texture * text = new Texture(texturePtr, info);
-			image[key] = text;
+			image.insert(make_pair(key, text));
 			return text;
 		}
 		return nullptr;
@@ -38,7 +40,7 @@ Texture * cImageManager::AddImage(const string key, const string path)
 	return find->second;
 }
 
-Texture * cImageManager::FindImage(const string key)
+Texture * cImageManager::FindImage(const string& key)
 {
 	auto find = image.find(key);
 	if (find== image.end())

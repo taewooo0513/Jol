@@ -14,7 +14,7 @@ void TitleScene::Init()
 	timer = new CDXUTTimer;
 	timer->Start();
 
-	
+	OBJ->AddObj(new ExObject(Vec2(0,0)));
 
 	TitleImage[0] = IMAGE->FindImage("TitleImage");
 	TitleImage[1] = IMAGE->FindImage("TitleImage2");
@@ -45,14 +45,14 @@ void TitleScene::Init()
 
 void TitleScene::Update()
 {
-	for (int i = 0; i < 30; i++)
-	{
-		for (int j = 0; j < 20; j++)
-		{
-			OBJ->AddObj(new ExObject(Vec2(psos[i][j].x, psos[i][j].y+ asdffasd)));
-		}
-	}
-	asdffasd += 70;
+	//for (int i = 0; i < 30; i++)
+	//{
+	//	for (int j = 0; j < 20; j++)
+	//	{
+	//		OBJ->AddObj(new ExObject(Vec2(psos[i][j].x, psos[i][j].y+ asdffasd)));
+	//	}
+	//}
+	//asdffasd += 70;
 }
 
 void TitleScene::Render()
@@ -61,6 +61,7 @@ void TitleScene::Render()
 
 void TitleScene::Release()
 {
+	SAFE_DELETE(timer);
 	if (DXUTIsMouseButtonDown(VK_LBUTTON))
 	{
 		

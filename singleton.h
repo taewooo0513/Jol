@@ -7,7 +7,7 @@ private:
 	static T  * p;
 public:
 	singleton() {}
-	~singleton() {}
+	virtual ~singleton() {}
 	static T * GetInstance()
 	{
 		if (!p)
@@ -16,8 +16,7 @@ public:
 	}
 	static void ReleaseInstance()
 	{
-		if (p)
-			 delete p;
+		delete p;
 		p = nullptr;
 	}
 };
